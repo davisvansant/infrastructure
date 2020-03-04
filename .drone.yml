@@ -1,0 +1,61 @@
+---
+kind: pipeline
+type: docker
+name: cookbooks
+
+steps:
+- name: Cookbook - apparmor
+  image: chef/chefdk:4.7.113
+  commands:
+    - export CHEF_LICENSE=accept-silent
+    - cd cookbooks/infrastructure_apparmor
+    - chef exec rspec -f d
+    - chef exec cookstyle
+
+- name: Cookbook - apt
+  image: chef/chefdk:4.7.113
+  commands:
+    - export CHEF_LICENSE=accept-silent
+    - cd cookbooks/infrastructure_apt
+    - chef exec rspec -f d
+    - chef exec cookstyle
+
+- name: Cookbook - chrony
+  image: chef/chefdk:4.7.113
+  commands:
+    - export CHEF_LICENSE=accept-silent
+    - cd cookbooks/infrastructure_chrony
+    - chef exec rspec -f d
+    - chef exec cookstyle
+
+- name: Cookbook - docker
+  image: chef/chefdk:4.7.113
+  commands:
+    - export CHEF_LICENSE=accept-silent
+    - cd cookbooks/infrastructure_docker
+    - chef exec rspec -f d
+    - chef exec cookstyle
+
+- name: Cookbook - elasticsearch
+  image: chef/chefdk:4.7.113
+  commands:
+    - export CHEF_LICENSE=accept-silent
+    - cd cookbooks/infrastructure_elasticsearch
+    - chef exec rspec -f d
+    - chef exec cookstyle
+
+- name: Cookbook - java
+  image: chef/chefdk:4.7.113
+  commands:
+    - export CHEF_LICENSE=accept-silent
+    - cd cookbooks/infrastructure_java
+    - chef exec rspec -f d
+    - chef exec cookstyle
+
+- name: Cookbook - ubuntu
+  image: chef/chefdk:4.7.113
+  commands:
+    - export CHEF_LICENSE=accept-silent
+    - cd cookbooks/infrastructure_ubuntu
+    - chef exec rspec -f d
+    - chef exec cookstyle
