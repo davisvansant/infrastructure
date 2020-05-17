@@ -60,6 +60,14 @@ steps:
     - chef exec rspec -f d
     - chef exec cookstyle
 
+- name: Cookbook - kubeadm
+  image: chef/chefdk:4.7.113
+  commands:
+    - export CHEF_LICENSE=accept-silent
+    - cd cookbooks/infrastructure_kubeadm
+    - chef exec rspec -f d
+    - chef exec cookstyle
+
 - name: Cookbook - ubuntu
   image: chef/chefdk:4.7.113
   commands:
