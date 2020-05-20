@@ -48,3 +48,13 @@ suites:
       inspec_tests:
         - test/integration/default/pull_images_test.rb
     attributes:
+
+  - name: single_node
+    run_list:
+      - recipe[infrastructure_swap::default]
+      - recipe[infrastructure_docker::default]
+      - recipe[infrastructure_kubeadm::single_node]
+    verifier:
+      inspec_tests:
+        - test/integration/default/single_node_test.rb
+    attributes:

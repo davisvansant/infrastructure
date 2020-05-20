@@ -1,0 +1,29 @@
+I, [2020-05-19T20:15:21.266352 #20860]  INFO -- Kitchen: -----> Starting Test Kitchen (v2.5.0)
+E, [2020-05-19T20:15:21.266844 #20860] ERROR -- Kitchen: ------Exception-------
+E, [2020-05-19T20:15:21.266883 #20860] ERROR -- Kitchen: Class: Kitchen::UserError
+E, [2020-05-19T20:15:21.266909 #20860] ERROR -- Kitchen: Message: Kitchen YAML file /Users/davisvansant/github.com/davisvansant/infrastructure/kitchen.yml does not exist.
+E, [2020-05-19T20:15:21.266932 #20860] ERROR -- Kitchen: ----------------------
+E, [2020-05-19T20:15:21.266953 #20860] ERROR -- Kitchen: ------Backtrace-------
+E, [2020-05-19T20:15:21.266973 #20860] ERROR -- Kitchen: /opt/chef-workstation/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.5.0/lib/kitchen/loader/yaml.rb:65:in `read'
+E, [2020-05-19T20:15:21.266994 #20860] ERROR -- Kitchen: /opt/chef-workstation/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.5.0/lib/kitchen/config.rb:154:in `data'
+E, [2020-05-19T20:15:21.267015 #20860] ERROR -- Kitchen: /opt/chef-workstation/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.5.0/lib/kitchen/config.rb:132:in `suites'
+E, [2020-05-19T20:15:21.267036 #20860] ERROR -- Kitchen: /opt/chef-workstation/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.5.0/lib/kitchen/config.rb:184:in `filter_instances'
+E, [2020-05-19T20:15:21.267057 #20860] ERROR -- Kitchen: /opt/chef-workstation/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.5.0/lib/kitchen/config.rb:143:in `build_instances'
+E, [2020-05-19T20:15:21.267078 #20860] ERROR -- Kitchen: /opt/chef-workstation/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.5.0/lib/kitchen/config.rb:117:in `instances'
+E, [2020-05-19T20:15:21.267099 #20860] ERROR -- Kitchen: /opt/chef-workstation/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.5.0/lib/kitchen/command.rb:112:in `filtered_instances'
+E, [2020-05-19T20:15:21.267121 #20860] ERROR -- Kitchen: /opt/chef-workstation/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.5.0/lib/kitchen/command.rb:142:in `parse_subcommand'
+E, [2020-05-19T20:15:21.267142 #20860] ERROR -- Kitchen: /opt/chef-workstation/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.5.0/lib/kitchen/command/test.rb:40:in `block in call'
+E, [2020-05-19T20:15:21.267163 #20860] ERROR -- Kitchen: /opt/chef-workstation/embedded/lib/ruby/2.6.0/benchmark.rb:293:in `measure'
+E, [2020-05-19T20:15:21.267185 #20860] ERROR -- Kitchen: /opt/chef-workstation/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.5.0/lib/kitchen/command/test.rb:38:in `call'
+E, [2020-05-19T20:15:21.267206 #20860] ERROR -- Kitchen: /opt/chef-workstation/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.5.0/lib/kitchen/cli.rb:52:in `perform'
+E, [2020-05-19T20:15:21.267227 #20860] ERROR -- Kitchen: /opt/chef-workstation/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.5.0/lib/kitchen/cli.rb:250:in `test'
+E, [2020-05-19T20:15:21.267248 #20860] ERROR -- Kitchen: /opt/chef-workstation/embedded/lib/ruby/gems/2.6.0/gems/thor-0.20.3/lib/thor/command.rb:27:in `run'
+E, [2020-05-19T20:15:21.267269 #20860] ERROR -- Kitchen: /opt/chef-workstation/embedded/lib/ruby/gems/2.6.0/gems/thor-0.20.3/lib/thor/invocation.rb:126:in `invoke_command'
+E, [2020-05-19T20:15:21.267290 #20860] ERROR -- Kitchen: /opt/chef-workstation/embedded/lib/ruby/gems/2.6.0/gems/thor-0.20.3/lib/thor.rb:387:in `dispatch'
+E, [2020-05-19T20:15:21.267312 #20860] ERROR -- Kitchen: /opt/chef-workstation/embedded/lib/ruby/gems/2.6.0/gems/thor-0.20.3/lib/thor/base.rb:466:in `start'
+E, [2020-05-19T20:15:21.267333 #20860] ERROR -- Kitchen: /opt/chef-workstation/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.5.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2020-05-19T20:15:21.267355 #20860] ERROR -- Kitchen: /opt/chef-workstation/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.5.0/lib/kitchen/errors.rb:171:in `with_friendly_errors'
+E, [2020-05-19T20:15:21.267642 #20860] ERROR -- Kitchen: /opt/chef-workstation/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.5.0/bin/kitchen:13:in `<top (required)>'
+E, [2020-05-19T20:15:21.267664 #20860] ERROR -- Kitchen: /opt/chef-workstation/bin/kitchen:367:in `load'
+E, [2020-05-19T20:15:21.267684 #20860] ERROR -- Kitchen: /opt/chef-workstation/bin/kitchen:367:in `<main>'
+E, [2020-05-19T20:15:21.267720 #20860] ERROR -- Kitchen: ----End Backtrace-----

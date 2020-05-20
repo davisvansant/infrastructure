@@ -3,5 +3,6 @@ source 'https://supermarket.chef.io'
 metadata
 
 group :kitchen do
+  cookbook 'infrastructure_swap', path: '../infrastructure_swap'
   cookbook 'infrastructure_docker', path: '../infrastructure_docker'
 end
