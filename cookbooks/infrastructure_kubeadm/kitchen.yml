@@ -39,3 +39,12 @@ suites:
       inspec_tests:
         - test/integration/default
     attributes:
+
+  - name: pull_images
+    run_list:
+      - recipe[infrastructure_docker::default]
+      - recipe[infrastructure_kubeadm::pull_images]
+    verifier:
+      inspec_tests:
+        - test/integration/default/pull_images_test.rb
+    attributes:
