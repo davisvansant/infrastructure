@@ -1,7 +1,0 @@
-source 'https://supermarket.chef.io'
-
-metadata
-
-group :kitchen do
-  cookbook 'infrastructure_apt', path: '../infrastructure_apt'
-end
