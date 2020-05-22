@@ -1,0 +1,51 @@
+{
+  "builders": [
+    {
+      "type": "vmware-iso",
+      "iso_url": "http://archive.ubuntu.com/ubuntu/dists/bionic/main/installer-amd64/current/images/netboot/mini.iso",
+      "iso_checksum": "8388f7232b400bdc80279668847f90da",
+      "iso_checksum_type": "md5",
+      "cpus": 2,
+      "memory": 2048,
+      "disk_size": 20480,
+      "disk_type_id": "4",
+      "guest_os_type": "ubuntu-64",
+      "version": "16",
+      "vm_name": "ubuntu_18_lts_docker_{{timestamp}}",
+      "http_directory": "http",
+      "boot_command":
+        [
+          "<esc>",
+          "install auto=true priority=critical url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg",
+          "<enter>"
+        ],
+      "ssh_timeout": "10m",
+      "ssh_username": "packer",
+      "ssh_password": "packer",
+      "shutdown_command": "sudo -S shutdown -P now"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "docker.tar.gz",
+      "destination": "/tmp/docker.tar.gz"
+    },
+    {
+      "type": "shell",
+      "inline": "sudo tar -xf /tmp/docker.tar.gz -C /tmp"
+    },
+    {
+      "type": "chef-solo",
+      "run_list": [
+        "recipe[infrastructure_apt::default]",
+        "recipe[infrastructure_chrony::default]",
+        "recipe[infrastructure_docker::default]"
+      ],
+      "version": "16.1.0",
+      "remote_cookbook_paths": [
+        "/tmp/cookbooks"
+      ]
+    }
+  ]
+}

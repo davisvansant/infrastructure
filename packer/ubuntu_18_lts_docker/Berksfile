@@ -1,0 +1,5 @@
+source chef_repo: '../../cookbooks'
+
+cookbook 'infrastructure_apt'
+cookbook 'infrastructure_chrony'
+cookbook 'infrastructure_docker'
