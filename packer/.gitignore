@@ -1,2 +1,4 @@
 output*
 packer_cache
+Berksfile.lock
+*.tar.gz
