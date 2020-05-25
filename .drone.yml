@@ -20,6 +20,14 @@ steps:
     - chef exec rspec -f d
     - chef exec cookstyle
 
+- name: Cookbook - artifactory
+  image: chef/chefdk:4.7.113
+  commands:
+    - export CHEF_LICENSE=accept-silent
+    - cd cookbooks/infrastructure_artifactory
+    - chef exec rspec -f d
+    - chef exec cookstyle
+
 - name: Cookbook - chrony
   image: chef/chefdk:4.7.113
   commands:
