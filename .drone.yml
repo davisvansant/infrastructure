@@ -131,3 +131,11 @@ steps:
     - cd cookbooks/infrastructure_swap
     - chef exec rspec -f d
     - chef exec cookstyle
+
+- name: Cookbook - vault
+  image: chef/chefdk:4.7.113
+  commands:
+    - export CHEF_LICENSE=accept-silent
+    - cd cookbooks/infrastructure_vault
+    - chef exec rspec -f d
+    - chef exec cookstyle

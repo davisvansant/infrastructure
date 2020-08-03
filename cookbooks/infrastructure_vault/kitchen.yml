@@ -1,0 +1,29 @@
+---
+driver:
+  name: vagrant
+  provider: vmware_fusion
+  customize:
+    memory: 2048
+    cpus: 2
+
+provisioner:
+  name: chef_zero
+  always_update_cookbooks: true
+  product_name: chef
+  product_version: 16.3.45
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: ubuntu-20.04
+  - name: ubuntu-18.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[infrastructure_vault::default]
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:
